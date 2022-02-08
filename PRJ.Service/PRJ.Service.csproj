@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Scripts\**" />
+    <Compile Remove="Seedings\**" />
+    <EmbeddedResource Remove="Scripts\**" />
+    <EmbeddedResource Remove="Seedings\**" />
+    <None Remove="Scripts\**" />
+    <None Remove="Seedings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.0" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PRJ.Repository\PRJ.Repository.csproj" />
+    <ProjectReference Include="..\PRJ.Utility\PRJ.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
